@@ -1,0 +1,619 @@
+//====================================================================================================
+//====================================================================================================
+
+//====================================================================================================
+.main {
+	max-width: rem(1440);
+	// .main__section
+	&__section {
+		// .main__section_1
+		&_1 {
+			//background-color: #fff;
+		}
+		// .page__section_2
+		&_2 {
+			//background-color: #e3eefd;
+		}
+		&_3 {
+			//background-color: #e3eefd;
+		}
+		&_4 {
+			//background-color: #fff;
+		}
+		// .page__section_2
+		&_5 {
+			//background-color: #e3eefd;
+		}
+		&_6 {
+			//background-color: #e3eefd;
+		}
+	}
+}
+//====================================================================================================
+//===========================================
+// старт hi section_1
+.hi {
+	background-color: #fff;
+	@include adaptiveValue("padding-top", 355, 50);
+	@include adaptiveValue("padding-bottom", 100, 10);
+	// .hi__container
+	&__container {
+	}
+	// .hi__body
+	.hi__body {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	// .hi__content
+	&__content {
+		flex: 0 1 52.7%;
+		padding: 0 0 0 0;
+		@media (max-width: $mobile) {
+			flex: 1 1 100%;
+			padding: 0;
+		}
+	}
+	// .hi__block-text
+	&__block-text {
+		@media (max-width: $mobile) {
+			//margin: 0 auto;
+		}
+		//max-width: rem(410); //=???????????????????????
+	}
+	// .hi__image
+	&__image {
+		//display: flex;
+		flex: 0 1 40.5%;
+		position: relative;
+		z-index: 2;
+		img {
+			max-width: 100%;
+			margin: 0 0 rem(30) 0;
+		}
+		@media (max-width: $mobile) {
+			flex: 1 1 100%;
+			text-align: center;
+			//margin: 0;
+		}
+	}
+}
+
+.block-text {
+	// .block-text__name
+	&__name {
+		font-size: rem(20);
+		font-weight: 700;
+		line-height: math.div(28, 20);
+		color: $mainColorBlock;
+		margin: 0 0 rem(40) rem(110);
+
+		span {
+			position: relative;
+		}
+		span::before {
+			display: block; /* делаем псевдоэлемент блоком для последующего работы с ним, как с простым div'ом */
+			width: 100px; /* устанавливаем ширину линию. Можно использовать произвольную ширину */
+			content: ""; /* позволяет вставлять генерируемое содержание в текст страницы, которое первоначально в тексте отсутствует */
+			position: absolute; /* абсолютное позиционирование для управления линиями */
+			border-bottom: 1px solid $mainColorBlock; /* бордер псевдо дива, т.е. сама линия */
+			top: 50%; /* позиционирование по вертикали */
+			right: 10px; /* позиционирование по горизонтали */
+		}
+	}
+	// .block-text__title
+	&__title {
+		font-size: rem(72);
+		font-weight: 700;
+		line-height: math.div(72, 72);
+		color: #1f2937;
+		margin: 0 0 rem(40) 0;
+		@include adaptiveValue("font-size", 72, 40);
+	}
+	// .block-text__text
+	&__text {
+		max-width: rem(553);
+		font-size: rem(18);
+		line-height: math.div(28, 18);
+		color: #6b7280;
+		margin: 0 0 rem(40) 0;
+		//left: 0;
+	}
+	// .block-text__buttons
+	&__buttons {
+		display: flex;
+		gap: rem(20);
+		margin: 0 0 rem(20) 0;
+	}
+	// .block-text__btn
+	&__btn {
+	}
+	// .block-text__button
+	&__button {
+	}
+	// .block-text__footer
+	&__footer {
+		display: flex;
+		font-size: rem(12);
+		line-height: math.div(16, 12);
+		color: #6b7280;
+		height: rem(36);
+		align-items: flex-end;
+		border-top: rem(1) solid #e5e7eb;
+		@include adaptiveValue("margin-bottom", 5, 30);
+	}
+}
+// финиш hi section_1
+//=============================================
+//========================================================================================================================================================
+// старт services
+.services {
+	background-color: #fff;
+	@include adaptiveValue("padding-top", 100, 20);
+	@include adaptiveValue("padding-bottom", 75, 20);
+	// .services__container
+	&__container {
+		display: flex;
+	}
+	&__content {
+		//flex: 0 0 math.div(692.92, 1186) * 100%;
+	}
+	&__header {
+		//@include adaptiveValue("margin-bottom", 112, 20);
+	}
+	// .services__title
+	&__title {
+		margin: 0 auto;
+		@include adaptiveValue("margin-bottom", 150, 30);
+		span {
+			color: $mainColorBlock;
+		}
+	}
+	// .services__body
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		//align-items: start;
+		@media (max-width: $tablet) {
+			display: block;
+			//flex-direction: column-reverse; // чтобы фото ушло вниз
+			//align-items: stretch;
+		}
+	}
+	// .services__image
+	&__image {
+		flex: 0 1 37.1%;
+		position: relative;
+		z-index: 2;
+		img {
+			max-width: 100%;
+			margin: 0 rem(30) 0 0;
+		}
+		@media (max-width: $tablet) {
+			flex: 1 1 100%;
+			text-align: center;
+			margin-bottom: rem(30);
+			//margin: 0;
+		}
+		@media (max-width: $mobile) {
+			flex: 1 1 100%;
+			text-align: center;
+			margin-bottom: rem(30);
+			//margin: 0;
+		}
+	}
+	// .services__card
+	&__card {
+		flex: 0 0 58.42%;
+	}
+}
+
+.servic {
+	&__row {
+		margin: 0 rem(-15);
+		display: flex;
+		/*здесь задаются свойства колонок */
+		//margin: 0 rem(-15);
+		/*добавим отступ между колонками ?*/
+		flex-wrap: wrap;
+		margin: 0 auto;
+	}
+	&__column {
+		display: flex;
+		padding: 0px 15px;
+		flex: 0 1 50%;
+		/*колонки становятся одинаковые по высоте - по самой высокой*/
+		@media (max-width: $tablet) {
+			//flex: 0 1 50%;
+		}
+		@media (max-width: $mobile) {
+			flex: 0 1 100%;
+		}
+		margin-bottom: rem(30);
+		@media (max-width: $tablet) {
+			//flex: 1 1 100%;
+		}
+	}
+	&__item {
+		background-color: #ffffff;
+		/*закрашиваем карточку*/
+		color: $grey;
+		/*чтобы ниже кнопки был промежуток*/
+		display: flex;
+		/*эти две строки чтобы прибить кнопку к низу и еще позволим блоку с текстом увеличиваться flex: 1 1 auto*/
+		flex-direction: column;
+		/*переварачиваем все элементы*/
+	}
+	&__title {
+		line-height: math.div(28, 18);
+		font-weight: 600;
+		@include adaptiveValue("font-size", 18, 16);
+		@include adaptiveValue("margin-bottom", 20, 5);
+	}
+	&__text {
+		font-size: rem(12);
+		line-height: math.div(16, 12);
+		font-weight: 500;
+		margin: 0 0 rem(20) 0;
+		flex: 1 1 auto;
+		//@include adaptiveValue("font-size", 12, 12);
+		@include adaptiveValue("margin-bottom", 20, 5);
+	}
+
+	&__link {
+		display: inline-flex;
+		font-size: rem(12);
+		line-height: math.div(16, 12);
+		font-weight: 800;
+		color: $mainColorBlock;
+		span {
+			margin: rem(2) 0 0 rem(10);
+			height: 100%;
+		}
+		//@include adaptiveValue("font-size", 18, 16);
+		@media (max-width: $tablet) {
+			//@include adaptiveValue("font-size", 12, 16);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+// финиш services
+//================================================
+//========================================================================================================================================================
+//================================================
+// старт .trusted section_3
+.trusted {
+	background-color: #fef2f2;
+	@include adaptiveValue("padding-top", 100, 40);
+	@include adaptiveValue("padding-bottom", 100, 40);
+	// .trusted__container
+	&__container {
+	}
+	// .trusted__body
+	&__body {
+	}
+	// .trusted__title
+	&__title {
+		font-size: rem(20);
+		line-height: math.div(28, 20);
+		color: $grey;
+		@include adaptiveValue("margin-bottom", 20, 30);
+	}
+	// .trusted__company
+	&__company {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+//========
+.company {
+	justify-content: center;
+	align-items: center;
+	row-gap: rem(30);
+	column-gap: rem(90);
+	// .company__item
+	&__item {
+		transition: all 0.3s ease 0s;
+		font-size: rem(51);
+		line-height: 10;
+		//align-items: baseline;
+		color: #b4a6a2;
+		&:hover {
+			color: #887a76;
+		}
+		@media (max-width: $mobile) {
+			display: inline-block;
+			margin: 0 auto;
+			//word-spacing: rem(25);
+		}
+	}
+}
+// финиш trusted section_3
+//=============================================
+// старт my-works
+.my-works {
+	background-color: #fff;
+	@include adaptiveValue("padding-top", 150, 50);
+	@include adaptiveValue("padding-bottom", 80, 20);
+	// .my-works__section
+	&__section {
+	}
+	// .my-works__container
+	&__container {
+	}
+	//my-works__content
+	&__content {
+		text-align: center;
+	}
+	// .my-works__title
+	&__title {
+		display: flex;
+		@include adaptiveValue("margin-bottom", 150, 20);
+	}
+	// .my-works__row
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		text-align: center;
+		//margin: 0 auto;
+		justify-content: space-between;
+	}
+	// .my-works__column
+	&__column {
+		// .my-works__column_1
+		&_1 {
+			flex: 0 1 math.div(619, 1186) * 100%;
+			@media (max-width: $mobile) {
+				flex: 1 1 100%;
+			}
+		}
+		// .my-works__column_2
+		&_2 {
+			flex: 0 1 math.div(536, 1186) * 100%;
+			@media (max-width: $mobile) {
+				flex: 1 1 100%;
+			}
+		}
+		// .my-works__column_3
+		&_3 {
+			@media (max-width: $mobile) {
+				flex: 1 1 100%;
+			}
+		}
+	}
+	// .my-works__image
+	&__image {
+		@include adaptiveValue("margin-bottom", 30, 10);
+		position: relative;
+		@media (any-hover: hover) {
+			&:hover {
+				.my-works__block {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+		}
+		img {
+			max-width: 100%;
+			@media (max-width: $mobile) {
+				//margin: 0 0 rem(30) 0;
+			}
+		}
+		// .my-works__image_1
+		&_1 {
+		}
+		&_2 {
+		}
+		&_3 {
+		}
+		&_4 {
+			margin: 0;
+		}
+	}
+	// .my-works__block
+	&__block {
+		position: absolute;
+		@include adaptiveValue("bottom", 30, 10);
+		left: 1%;
+		right: 0;
+		background-color: $white;
+		width: 70%;
+		margin: 0 auto;
+		text-align: left;
+		border-radius: rem(5);
+		padding: rem(22) rem(50) rem(22) rem(25);
+		@include adaptiveValue("padding-top", 22, 10);
+		@include adaptiveValue("padding-bottom", 22, 10);
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease 0s;
+		&::before {
+			content: "";
+			position: absolute;
+			right: rem(25);
+			top: 50%;
+			transform: translate(0, -50%);
+			background: url("@img/my-works/link-arrow.svg") 0 0 / 100% no-repeat;
+			width: rem(30);
+			height: rem(30);
+		}
+		@media (max-width: $mobile) {
+			width: 75%;
+		}
+		@media (max-width: $mobileSmall) {
+			width: 85%;
+		}
+	}
+	// .item__text
+	&__subtitle {
+		color: $mainColor;
+		font-weight: 500;
+		font-size: rem(18);
+		line-height: math.div(28, 18);
+	}
+	// .item__text_1
+	&__speciality {
+		color: #9ca3af;
+		font-weight: 500;
+		font-size: rem(14);
+		line-height: math.div(20, 14);
+	}
+}
+// финиш my-works
+//================================================
+//================================================
+// старт planninge
+.planninge {
+	background-color: #fff;
+	@include adaptiveValue("padding-top", 70, 20);
+	@include adaptiveValue("padding-bottom", 70, 20);
+	// .
+	&__container {
+	}
+	//planninge__content
+	&__content {
+	}
+	//planninge__block-text
+	&__block-text {
+		margin: 0 0 rem(45) 0;
+	}
+	// planninge__items
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
+	}
+	//planninge__column
+	&__column {
+		position: relative;
+		padding: 0 rem(36);
+		flex: 0 1 33.333%;
+		@media (max-width: $tablet) {
+			&:not(:last-child) {
+				margin-bottom: rem(55);
+			}
+		}
+	}
+	// planninge__item
+	&__item {
+	}
+}
+
+.item-planninge {
+	height: 100%; // чтобы карточки были одной высоты независимо от количества текста
+	//position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding-bottom: rem(30);
+	// .item-planninge__icon
+	&__icon {
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		background-color: #eef2ff;
+		border-radius: rem(6);
+		width: rem(140);
+		height: rem(140);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 20);
+		}
+	}
+	// .item-planninge__title
+	&__title {
+		flex-grow: 1;
+		color: #374151;
+		font-weight: 600;
+		@include adaptiveValue("font-size", 30, 24);
+		line-height: math.div(36, 30);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 20, 10);
+		}
+	}
+	// .item-planninge__text
+	&__text {
+		font-size: rem(18);
+		line-height: math.div(28, 18);
+		color: #9ca3af;
+	}
+}
+// финиш planninge
+//================================================
+
+//========================================================================================================================================================
+
+//================================================
+// старт
+.careers {
+	background-color: #fff;
+	@include adaptiveValue("padding-top", 80, 40);
+	@include adaptiveValue("padding-bottom", 126, 40);
+	// .careers__container
+	&__container {
+	}
+	//careers__content
+	&__content {
+	}
+	// .careers__title
+	&__title {
+		margin: 0 auto;
+		@include adaptiveValue("margin-bottom", 150, 30);
+	}
+	// .careers__body
+	&__body {
+	}
+	// .careers__block
+	&__block {
+	}
+}
+
+.block {
+	// .block__row
+	&__row {
+		color: #6b7280;
+		display: flex;
+		//margin: 0 0 rem(80) 0;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 80, 10);
+		}
+		// .block__row_title
+		&_title {
+			//margin: 0 0 rem(80) 0;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.block-element {
+	font-size: rem(16);
+	line-height: math.div(24, 16);
+	font-weight: 500;
+	text-align: left;
+	// .block-element_1
+	&_1 {
+		flex: 1 1 48%;
+		padding: 0 rem(20) 0 0;
+		span {
+			color: #1f2937;
+			font-weight: 600;
+		}
+	}
+	// .block-element_2
+	&_2 {
+		flex: 1 1 38%;
+		padding: 0 rem(25) 0 0;
+	}
+	// .block-element_3
+	&_3 {
+		flex: 1 1 8%;
+	}
+}
+//=======

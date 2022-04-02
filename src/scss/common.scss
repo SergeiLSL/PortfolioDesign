@@ -1,0 +1,48 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.button {
+	display: inline-block;
+	font-weight: 800;
+	color: $mainColorBlock;
+	font-size: rem(18);
+	line-height: math.div(28, 18);
+	font-weight: 500;
+	padding: rem(12) rem(33);
+	border-radius: rem(6);
+	border: rem(1) solid $mainColorBlock;
+	background-color: #fff;
+	transition: background-color 0.3s ease 0s;
+	&:hover {
+		background-color: #5a53b9;
+		color: #fff;
+	}
+	&_blue {
+		background-color: #3730A3;
+		color: #fff;
+		&:hover {
+			background-color: #5a53b9;
+		}
+	}
+	@media (max-width: $mobile) {
+		padding: rem(12) rem(15);		
+	}
+}
+//==================================
+.title {
+	max-width: rem(1039);
+	font-size: rem(48);
+	line-height: math.div(48, 48);
+	color: #1f2937;
+	font-weight: 800;
+	text-align: center;
+	@include adaptiveValue("font-size", 48, 28);
+}
+//=====================================
+.ibg {
+	position: absolute;
+	width: 100%;
+	//height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+}
