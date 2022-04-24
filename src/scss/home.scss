@@ -59,7 +59,6 @@
 		@media (max-width: $mobile) {
 			//margin: 0 auto;
 		}
-		//max-width: rem(410); //=???????????????????????
 	}
 	// .hi__image
 	&__image {
@@ -352,7 +351,9 @@
 	}
 	// .my-works__title
 	&__title {
-		display: flex;
+		//display: flex;
+		max-width: rem(1039);
+		margin: 0 auto;
 		@include adaptiveValue("margin-bottom", 150, 20);
 	}
 	// .my-works__row

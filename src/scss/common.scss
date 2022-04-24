@@ -29,11 +29,10 @@
 }
 //==================================
 .title {
-	max-width: rem(1039);
 	font-size: rem(48);
 	line-height: math.div(48, 48);
 	color: #1f2937;
-	font-weight: 800;
+	font-weight: 600;
 	text-align: center;
 	@include adaptiveValue("font-size", 48, 28);
 }
