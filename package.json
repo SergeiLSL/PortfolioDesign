@@ -20,7 +20,7 @@
 	"devDependencies": {
 		"copy-webpack-plugin": "latest",
 		"css-loader": "latest",
-		"del": "latest",
+		"del": "^6.1.1",
 		"file-include-webpack-plugin-replace": "latest",
 		"fls-bemtree-from-html": "^1.0.0",
 		"gulp": "latest",
